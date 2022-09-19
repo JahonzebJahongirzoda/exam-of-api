@@ -67,7 +67,7 @@ public class QuoteController : ControllerBase
 
 
     [HttpGet("Getbyid")]
-    public async Task<int> Deletebyids(int id)
+    public async Task<List<Quote>> Getbyid(int id)
 
     {
         return await _service.Getbyid(id);

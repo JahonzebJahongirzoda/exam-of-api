@@ -376,11 +376,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\New folder - Copy\\Webapi\\Webapi.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Exam of api\\Webapi\\Webapi.csproj",
       "projectName": "Webapi",
-      "projectPath": "C:\\Users\\HP\\Desktop\\New folder - Copy\\Webapi\\Webapi.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\Exam of api\\Webapi\\Webapi.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\New folder - Copy\\Webapi\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\Exam of api\\Webapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -395,8 +395,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\HP\\Desktop\\New folder - Copy\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\HP\\Desktop\\New folder - Copy\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\HP\\Desktop\\Exam of api\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\Exam of api\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

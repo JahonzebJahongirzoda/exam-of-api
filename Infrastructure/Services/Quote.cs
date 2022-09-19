@@ -25,6 +25,12 @@ public class QuoteServices
         }
     }
 
+
+
+
+
+
+
     public async Task<List<Quote>> Getbyrand()
     {
         using (var connection = new NpgsqlConnection(_connectionString))
@@ -44,24 +50,18 @@ public class QuoteServices
 
 
 
-
-
     public async Task<int> UpdateQuote(Quote quote)
     {
 
         using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
         {
 
-            string sql = $"UPDATE Quote SET author = '{quote.Author}', quotetext = '{quote.QuoteText}' WHERE id = '{quote.id}'; ";
+            string sql = $"UPDATE Quote SET author = '{quote.Author}', quotetext = '{quote.QuoteText}', categoryid = '{quote.Categoryid}' WHERE id = '{quote.id}'; ";
             var response = await connection.ExecuteAsync(sql);
             return response;
         }
 
     }
-
-
-
-
 
 
 
@@ -76,7 +76,7 @@ public class QuoteServices
         using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
         {
 
-            string sql = $"delete from quote share id ={id}";
+            string sql = $"delete from quote where id ={id}";
             var response = await connection.ExecuteAsync(sql);
             return response;
         }
@@ -89,31 +89,15 @@ public class QuoteServices
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public async Task<int> Getbyid(int id)
+    public async Task<List<Quote>> Getbyid(int id)
     {
 
         using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
         {
 
             string sql = $"select * from quote where quote.CategoryId ={id}";
-            var response = await connection.ExecuteAsync(sql);
-            return response;
+            var response = await connection.QueryAsync<Quote>(sql);
+            return response.ToList();
         }
 
     }
